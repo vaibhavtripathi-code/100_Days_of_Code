@@ -22,3 +22,28 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+
+print("You are at crossroads, do you wanna go left or right?")
+road = input()
+if road == "left":
+    print("You reached a river of blood!, Do you wanna swim or wait?")
+    river = input()
+    if river == "wait":
+        print("Congrats! You died in a landslide.")
+    elif river == "swim":
+        print('You see orbs in front of you. Which one do you want to inspect? red/yellow/blue')
+        orb = input()
+        if orb == 'red':
+            print("The orb glows brighter every second and melts you!")
+        elif orb == 'blue':
+            print("The ground below you disappeared and you fell to your abyss!")
+        elif orb == 'yellow':
+            print("Congrats! You win a 0 skill game that gives no reward.")
+        else:
+            print("Really?")
+    else:
+        print("Smartest player ever!")
+elif road == "right":
+    print("You were eaten by a hentai monster!")
+else:
+    print("Can you read?")
