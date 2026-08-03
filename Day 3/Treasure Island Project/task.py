@@ -25,25 +25,25 @@ print("Your mission is to find the treasure.")
 
 print("You are at crossroads, do you wanna go left or right?")
 road = input()
-if road == "left":
+if road == "left" or 'Left':
     print("You reached a river of blood!, Do you wanna swim or wait?")
     river = input()
-    if river == "wait":
+    if river == "wait" or "Wait":
         print("Congrats! You died in a landslide.")
-    elif river == "swim":
+    elif river == "swim" or "Swim":
         print('You see orbs in front of you. Which one do you want to inspect? red/yellow/blue')
         orb = input()
-        if orb == 'red':
+        if orb == 'red' or 'Red':
             print("The orb glows brighter every second and melts you!")
-        elif orb == 'blue':
+        elif orb == 'blue' or 'Blue':
             print("The ground below you disappeared and you fell to your abyss!")
-        elif orb == 'yellow':
+        elif orb == 'yellow' or 'Yellow':
             print("Congrats! You win a 0 skill game that gives no reward.")
         else:
             print("Really?")
     else:
         print("Smartest player ever!")
-elif road == "right":
+elif road == "right" or "Right":
     print("You were eaten by a hentai monster!")
 else:
     print("Can you read?")
