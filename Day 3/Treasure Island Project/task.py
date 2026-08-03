@@ -23,27 +23,38 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-print("You are at crossroads, do you wanna go left or right?")
-road = input()
-if road == "left" or 'Left':
-    print("You reached a river of blood!, Do you wanna swim or wait?")
-    river = input()
-    if river == "wait" or "Wait":
-        print("Congrats! You died in a landslide.")
-    elif river == "swim" or "Swim":
-        print('You see orbs in front of you. Which one do you want to inspect? red/yellow/blue')
-        orb = input()
-        if orb == 'red' or 'Red':
-            print("The orb glows brighter every second and melts you!")
-        elif orb == 'blue' or 'Blue':
-            print("The ground below you disappeared and you fell to your abyss!")
-        elif orb == 'yellow' or 'Yellow':
-            print("Congrats! You win a 0 skill game that gives no reward.")
+win = 0
+tries = 0
+while win == 0:
+    tries += 1
+    if tries > 1 and tries < 5:
+        print("Let's try that again.")
+    elif tries >= 5:
+        print("Pathetic! Try again.")
+    print("You are at a crossroads. Do you want to go left or right?")
+    road = input()
+    if road == "left" or road == "Left":
+        print("You reached a river of blood! Do you want to swim or wait?")
+        river = input()
+        if river == "wait" or river == "Wait":
+            print("Congrats! You died in a landslide.")
+        elif river == "swim" or river == "Swim":
+            print("You see orbs in front of you. Which one do you want to inspect? Red/Yellow/Blue")
+            orb = input()
+            if orb == "red" or orb == "Red":
+                print("The orb glows brighter every second and melts you. Game Over!")
+            elif orb == "blue" or orb == "Blue":
+                print("The ground below you disappears, and you fall into the abyss. Game Over!")
+            elif orb == "yellow" or orb == "Yellow":
+                print("Congrats! You win a zero-skill game, and the real treasure was the friends"
+                      " you made along the way.")
+                win = 1
+            else:
+                print("Really?")
         else:
-            print("Really?")
+            print("Smartest player ever!")
+    elif road == "right" or road == "Right":
+        print("You were eaten by a hentai monster. Game Over!")
     else:
-        print("Smartest player ever!")
-elif road == "right" or "Right":
-    print("You were eaten by a hentai monster!")
-else:
-    print("Can you read?")
+        print("Can you read?")
+
